@@ -1,6 +1,7 @@
 # **Mean_Shift_Clustering**
 
 ## Introduction  
+
 Mean Shift Clustering is a density-based unsupervised learning algorithm that groups data points by shifting them toward regions of higher density. Unlike k-means, it does not require specifying the number of clusters beforehand, making it useful for identifying arbitrary cluster shapes.
 The algorithm iteratively moves data points to the mean of nearby points within a defined bandwidth, converging to dense regions in the feature space. The choice of bandwidth significantly impacts clustering performance.
 Mean Shift is widely used in image segmentation, object tracking, and anomaly detection. Despite its flexibility, its computational cost can be high for large datasets. This study explores its theoretical foundations, implementation, and optimization techniques.
