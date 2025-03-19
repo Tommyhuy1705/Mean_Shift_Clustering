@@ -1,39 +1,47 @@
 # **Mean_Shift_Clustering**
 
 ## Introduction  
-
+Mean Shift Clustering is a density-based unsupervised learning algorithm that groups data points by shifting them toward regions of higher density. Unlike k-means, it does not require specifying the number of clusters beforehand, making it useful for identifying arbitrary cluster shapes.
+The algorithm iteratively moves data points to the mean of nearby points within a defined bandwidth, converging to dense regions in the feature space. The choice of bandwidth significantly impacts clustering performance.
+Mean Shift is widely used in image segmentation, object tracking, and anomaly detection. Despite its flexibility, its computational cost can be high for large datasets. This study explores its theoretical foundations, implementation, and optimization techniques.
 ---
 
 ## **Features**
-
+- **Density-Based Approach**: Finds clusters based on high-density regions without assuming a specific number of clusters.
+- **Adaptive Cluster Shape**: Identifies arbitrarily shaped clusters, unlike k-means which assumes spherical clusters.
+- **Bandwidth Sensitivity**: The choice of bandwidth affects the clustering outcome, influencing the number and shape of clusters.
+- **Non-Parametric**: Does not require prior knowledge about the data distribution or the number of clusters.
+- **Robust to Noise**: Can handle outliers better than some other clustering methods.
+- **High Computational Cost**: Computationally expensive for large datasets due to its iterative nature.
 
 ---
 
 ## Project Structure  
 ```plaintext
 ├── data/                           # Input data
-│   ├── images/                     # Test images
-│   └── videos/                     # Test videos
-│           
+│   ├── raw/                        # Raw datasets (CSV files)
+│   ├── processed/                   # Preprocessed datasets
+│   ├── sample/                      # Sample datasets for quick testing
+│
 ├── results/                        # Experiment results
-│   ├── Chan-vese_csv/              # CSV files for Chan-Vese performance
-│   ├── Watershed-ACM_csv/          # CSV files for Watershed and Active Contour Snake
-│   └── plots/                      # Plots generated from CSV files
-│                
+│   ├── cluster_csv/                # CSV files storing clustering results
+│   ├── evaluation_metrics/         # CSV files storing evaluation scores
+│   ├── plots/                      # Visualization of clustering results
+│
 ├── src/                            # Main source code
 │   ├── core/                       # Core algorithms
-│   │   ├── active_contour_snake.py # Active Contour Snake algorithm implementation
-│   │   ├── base.py                 # Base algorithms (e.g., DFS, BFS)
-│   │   ├── chan_vese_collision.py  # Chan-Vese algorithm implementation
-│   │   ├── simulation.py           # Video simulation generation
-│   │   └── watershed.py            # Watershed algorithm implementation
+│   │   ├── mean_shift.py           # Mean Shift algorithm implementation
+│   │   ├── utils.py                # Utility functions (distance calculation, kernel functions)
+│   │   ├── preprocessing.py        # Data preprocessing (normalization, feature scaling)
+│   │   ├── evaluation.py           # Clustering evaluation (silhouette score, Davies–Bouldin index)
+│   │   └── visualization.py        # Plotting and result visualization
 │   ├── test/                       # Unit tests for algorithms
 │   └── main.py                     # Application entry point
-│           
+│
 ├── experiments/                    # Experiment configurations and notes
-│   ├── experiment.ipynb            # Performance evaluation.
+│   ├── experiment.ipynb            # Performance evaluation notebook
 │   └── Readme.md                   # Experiment details
-│           
+│
 ├── README.md                       # Project documentation
 └── requirements.txt                # Required Python libraries
 ```
