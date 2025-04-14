@@ -20,31 +20,20 @@ Mean Shift is widely used in image segmentation, object tracking, and anomaly de
 ## Project Structure  
 ```plaintext
 ├── data/                           # Input data
-│   ├── raw/                        # Raw datasets (CSV files)
-│   ├── processed/                   # Preprocessed datasets
-│   ├── sample/                      # Sample datasets for quick testing
+│   ├── Iris.csv                    # Iris dataset
+│   ├── Mall_Customers.csv          # Customers dataset
 │
-├── results/                        # Experiment results
-│   ├── cluster_csv/                # CSV files storing clustering results
-│   ├── evaluation_metrics/         # CSV files storing evaluation scores
-│   ├── plots/                      # Visualization of clustering results
+├── Output/                         # Model storage
+│   ├── MeanShift_dataset1.mdl      # Mean Shift for Iris dataset
+│   ├── MeanShift_dataset2.mdl      # Mean Shift for Customers dataset
 │
-├── src/                            # Main source code
-│   ├── core/                       # Core algorithms
-│   │   ├── mean_shift.py           # Mean Shift algorithm implementation
-│   │   ├── utils.py                # Utility functions (distance calculation, kernel functions)
-│   │   ├── preprocessing.py        # Data preprocessing (normalization, feature scaling)
-│   │   ├── evaluation.py           # Clustering evaluation (silhouette score, Davies–Bouldin index)
-│   │   └── visualization.py        # Plotting and result visualization
-│   ├── test/                       # Unit tests for algorithms
-│   └── main.py                     # Application entry point
+├── MeanShift.ipynb                 # Main source code
 │
-├── experiments/                    # Experiment configurations and notes
-│   ├── experiment.ipynb            # Performance evaluation notebook
-│   └── Readme.md                   # Experiment details
+├── Evaluation.ipynb                # Clustering model evaluation using Silhouette Scores, Davies-Bouldin Index, Calinski-Harabasz Index.
 │
-├── README.md                       # Project documentation
-└── requirements.txt                # Required Python libraries
+├── Simulation.ipynb                # Theoretical simulation of the Mean Shift algorithm
+|
+└── README.md                       # Project documentation
 ```
 
 ---
