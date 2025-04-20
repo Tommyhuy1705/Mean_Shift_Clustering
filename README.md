@@ -31,6 +31,10 @@ Mean Shift is widely used in image segmentation, object tracking, and anomaly de
 │
 ├── Evaluation.ipynb                # Clustering model evaluation using Silhouette Scores, Davies-Bouldin Index, Calinski-Harabasz Index.
 │
+├── mean_shift_utils.py             # Utility functions for running and evaluating Mean Shift clustering.
+│
+├── Solution.ipynb                  # Clustering model comparison: Mean Shift vs K-Means, DBSCAN, and Hierarchical Agglomerative Clustering.
+│
 ├── Simulation.ipynb                # Theoretical simulation of the Mean Shift algorithm
 |
 └── README.md                       # Project documentation
