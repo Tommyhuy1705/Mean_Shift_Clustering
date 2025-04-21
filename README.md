@@ -64,24 +64,39 @@ Follow the steps below to set up the project:
 ---
 
 ## **Usage**
-1. Place input test images or videos into the `data/images/` or `data/videos/` directories. --> Changes
-2. Modify configurations in `experiments/experiment.md` to set up desired experiments.
-3. Execute the `main.py` script to run the desired algorithm.
-4. Analyze results in the `results/` folder:
-   - CSV files provide performance metrics.
-   - Plots visualized in `.ipynb` notebooks or saved in the `plots/` folder.
+*1. Place input data files into the Data/ directory:*
+The dataset files are required for the experiments. Place the following files in the Data/ folder:
+- Iris.csv
+- Mall_Customers.csv
+
+*2. Execute the MeanShift.ipynb script to train the Mean Shift Clustering model:*
+Run the MeanShift.ipynb notebook to implement and train the Mean Shift Clustering model using the provided data.
+
+*3. Evaluate the model's clustering performance in Evaluation.ipynb:*
+After training the model, evaluate the clustering quality using the following metrics:
+- Silhouette Score
+- Davies-Bouldin Index
+- Calinski-Harabasz Index
+
+*4. Compare clustering performance across algorithms in Solution.ipynb:*
+In the Solution.ipynb notebook, compare the clustering performance of the following algorithms using the same evaluation metrics:
+- Mean Shift
+- KMeans
+- DBSCAN
+- Hierarchical Agglomerative Clustering (HAC)
 
 ---
 
 ## **Results**
 ### Key Findings:
-1. **___**:
-   - 
- 
+1. **Mean Shift Clustering**:
 
-### Result Visualization:
+- **Flexibility**: No need for a predefined number of clusters, adapts to the data's inherent structure.
+- **Cluster Shape**: Effectively identifies arbitrarily shaped clusters, making it ideal for complex data distributions.
+- **Bandwidth Sensitivity**: Performance is influenced by the bandwidth parameter; improper choice can affect clustering results.
+- **Outlier Robustness**: Handles outliers better than K-Means but may still be affected by small bandwidth settings.
+- **Computational Complexity**: Can be computationally expensive, especially with large datasets.
  
-
 ---
 
 ## **Contributions**
