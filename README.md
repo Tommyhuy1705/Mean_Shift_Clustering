@@ -56,11 +56,6 @@ Follow the steps below to set up the project:
    pip install -r requirements.txt
    ```
 
-3. **Run the application**:  
-   ```bash
-   python src/main.py
-   ```
-
 ---
 
 ## **Usage**
