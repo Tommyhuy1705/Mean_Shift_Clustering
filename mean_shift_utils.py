@@ -1,9 +1,6 @@
-# mean_shift_utils.py
-
 import numpy as np
 from sklearn.cluster import MeanShift
 from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
-from sklearn.preprocessing import StandardScaler
 
 def evaluate_mean_shift(X_scaled, bandwidths):
     models = []
