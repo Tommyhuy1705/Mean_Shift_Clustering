@@ -77,7 +77,6 @@ After training the model, evaluate the clustering quality using the following me
 In the Solution.ipynb notebook, compare the clustering performance of the following algorithms using the same evaluation metrics:
 - Mean Shift
 - KMeans
-- DBSCAN
 - Hierarchical Agglomerative Clustering (HAC)
 
 ---
